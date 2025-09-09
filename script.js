@@ -14,6 +14,23 @@ else {
 
 // bananas end
 
+// even start
+let num = +prompt('введите число')
+if (isNaN(num)) {
+    console.log('Пожалуйста, введите корректное число.');
+}
+let sum = 0;
+
+for (let i = 0; i <= num; i++) {
+    if (i % 2 === 0) {
+        sum += i;
+    }
+}
+alert('Сумма всех четных чисел до ' + num + ' равна: ' + sum);
+
+
+// even end
+
 // degree start
 
 do {
