@@ -2,23 +2,17 @@
 
 let bananas = +prompt('Введите любое число');
 
-if (bananas == 1) {
-    alert(bananas + ' banana')
-}
-else if (bananas == bananas) {
-    alert(bananas + ' bananas')
-}
-else {
-    alert('Попробуйте ввести число заново')
-}
+bananas === 1
+    ? alert(bananas + ' banana')
+    : bananas > 1
+        ? alert(bananas + ' bananas')
+        : alert('Попробуйте ввести число заново');
 
 // bananas end
 
 // even start
 let num = +prompt('введите число')
-if (isNaN(num)) {
-    console.log('Пожалуйста, введите корректное число.');
-}
+
 let sum = 0;
 
 for (let i = 0; i <= num; i++) {
@@ -27,6 +21,9 @@ for (let i = 0; i <= num; i++) {
     }
 }
 alert('Сумма всех четных чисел до ' + num + ' равна: ' + sum);
+if (isNaN(num)) {
+    alert('Пожалуйста, введите корректное число.');
+}
 
 
 // even end
@@ -35,17 +32,14 @@ alert('Сумма всех четных чисел до ' + num + ' равна: 
 
 do {
     var number = +prompt('Введите число');
-    var degree = +prompt('Введите степень');
-
-    if (number < 0 || degree < 0) {
-        alert('Введите значение  заново');
+    var degree = +prompt('Введите степень'); 
+    
+    if (number < 0 || degree < 0 || isNaN(number) || isNaN(degree)) {
+        alert('Введите значения заново');
     }
-} while (isNaN(number) || isNaN(degree) || number < 0 || degree < 0);
+} while (number < 0 || degree < 0 || isNaN(number) || isNaN(degree));
 
-let answer = 1;
-for (let i = 1; i <= number || i <= degree; i++) {
-    answer = number ** degree
-}
-alert(answer);
+let answer = number ** degree;
+alert('Результат: ' + answer);
 
-// degree end 
+// degree end
