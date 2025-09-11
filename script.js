@@ -33,11 +33,11 @@ if (isNaN(num)) {
 do {
     var number = +prompt('Введите число');
     var degree = +prompt('Введите степень'); 
-    
-    if (number < 0 || degree < 0 || isNaN(number) || isNaN(degree)) {
+
+    if (number <= 0 || isNaN(number) || degree <= 0 || isNaN(degree)) {
         alert('Введите значения заново');
     }
-} while (number < 0 || degree < 0 || isNaN(number) || isNaN(degree));
+} while (number <= 0 || isNaN(number) || degree <= 0 || isNaN(degree));
 
 let answer = number ** degree;
 alert('Результат: ' + answer);
